@@ -13,7 +13,7 @@ default_args = {
 }
 
 dag = DAG(
-    dag_id='create_empty_table_git',
+    dag_id='create_table2',
     default_args=default_args,
     description='DAG to create empty table, dataset provided',
     schedule_interval="@once",
@@ -24,8 +24,8 @@ create_table_task = BigQueryCreateEmptyTableOperator(
 
     project_id="dark-furnace-298806",
     dataset_id="shtest",
-    task_id="create_git_empty_table_git",
-    table_id="new_empty_table_git",
+    task_id="create_tabel2_task",
+    table_id="new_table2",
     bigquery_conn_id="bigquery_default",
     google_cloud_storage_conn_id="google_cloud_default",
     dag=dag
