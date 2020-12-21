@@ -16,7 +16,7 @@ dag = DAG(
     dag_id='create_empty_table_git',
     default_args=default_args,
     description='DAG to create empty table, dataset provided',
-    schedule_interval=timedelta(days=1),
+    schedule_interval="@once",
     catchup=False,
 )
 
