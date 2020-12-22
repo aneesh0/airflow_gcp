@@ -22,7 +22,7 @@ dag = DAG(
     dag_id='scheduler_check',
     default_args=default_args,
     description='DAG to test scheduler working fine',
-    schedule_interval="*/3 * * * *",
+    schedule_interval="*/10 * * * *",
     catchup=False,
 )
 
